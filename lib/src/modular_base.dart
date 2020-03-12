@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular/src/routers/router.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 import 'interfaces/child_module.dart';
 import 'interfaces/route_guard.dart';
@@ -17,6 +18,7 @@ class Modular {
   static const String initialRoute = '/';
   static bool debugMode = !kReleaseMode;
   static bool isCupertino = false;
+  static Model scopedModel;
 
   static Map<String, ChildModule> _injectMap = {};
   static ChildModule _initialModule;
